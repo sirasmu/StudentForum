@@ -62,7 +62,7 @@ namespace StudentForum.Models
         public bool RememberMe { get; set; }
     }
 
-    public class RegisterViewModel
+    public class RegisterViewModel 
     {
         [Required]
         [EmailAddress]
@@ -79,9 +79,22 @@ namespace StudentForum.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
-    }
+      
+        [Required]
+        [Display( Name = "Fisrt name" )]
+        public string FirstName { get; set; }
 
-    public class ResetPasswordViewModel
+       [Required]
+       [Display( Name = "Last name" )]
+       public string LastName { get; set; }
+
+       [Required]
+       [Display( Name = "Student number" )]
+       public string StudentNo { get; set; }
+
+   }
+
+   public class ResetPasswordViewModel
     {
         [Required]
         [EmailAddress]
